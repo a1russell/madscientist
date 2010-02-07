@@ -17,7 +17,7 @@ if [[ -d ${PROJECT_ROOT}/madscientist ]]; then
 fi
 mv ${PROJECT_ROOT}/madscientist-${RELEASE} ${PROJECT_ROOT}/madscientist
 if [[ -f ${PROJECT_ROOT}/madscientist-${RELEASE}.bak/settings_local.py ]]; then
-	mv ${PROJECT_ROOT}/madscientist-${RELEASE}/settings_local.py ${PROJECT_ROOT}/madscientist/
+	mv ${PROJECT_ROOT}/madscientist-${RELEASE}.bak/settings_local.py ${PROJECT_ROOT}/madscientist/
 else
 	cp ${PROJECT_ROOT}/madscientist/settings_local.py.template ${PROJECT_ROOT}/madscientist/settings_local.py
 fi
