@@ -24,8 +24,8 @@ fi
 if [[ -d ${PROJECT_ROOT}/madscientist-${RELEASE}.bak ]]; then
 	rm -rf ${PROJECT_ROOT}/madscientist-${RELEASE}.bak
 fi
-chown -R root:www-admin ${PROJECT_ROOT}/madscientist
-chown -R g+w ${PROJECT_ROOT}/madscientist
+chown -R root:submin ${PROJECT_ROOT}/madscientist
+chmod -R g+w ${PROJECT_ROOT}/madscientist
 rm /tmp/madscientist-${RELEASE}.tar.gz
 apache2ctl -k graceful
 
