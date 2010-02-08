@@ -1,28 +1,32 @@
 {% extends "base.html" %}
 
 {% block body %}
-	<nav>
-		<a href="{% url home %}">Home</a>
-	</nav>
-	<nav>
-		<h1>Main</h1>
-		<ul>
+	{% block breadcrumb %}
+		<nav>
 			<a href="{% url home %}">Home</a>
-			<a href="">What's New</a>
-			<a href="">Site Evolution</a>
-			<a href="">The To-Do List</a>
-			<a href="{% url faq %}">FAQ</a>
-		</ul>
+		</nav>
+	{% endblock %}
+	{% block section_menu %}
+		<nav>
+			<h1>Main</h1>
+			<ul>
+				<a href="{% url home %}">Home</a>
+				<a href="">What's New</a>
+				<a href="">Site Evolution</a>
+				<a href="">The To-Do List</a>
+				<a href="{% url faq %}">FAQ</a>
+			</ul>
 
-		<h1>Things to do</h1>
-		<ul>
-			<a href="">View Photo Albums</a>
-			<a href="">Read Articles</a>
-			<a href="">Socialize</a>
-			<a href="">Enter the Vault</a>
-			<a href="ftp://madscientist.is-a-geek.net/">Legacy FTP</a>
-		</ul>
-	</nav>
+			<h1>Things to do</h1>
+			<ul>
+				<a href="">View Photo Albums</a>
+				<a href="">Read Articles</a>
+				<a href="">Socialize</a>
+				<a href="">Enter the Vault</a>
+				<a href="ftp://madscientist.is-a-geek.net/">Legacy FTP</a>
+			</ul>
+		</nav>
+	{% endblock %}
 	<section>
 		{% block content %}
 		{% endblock %}
