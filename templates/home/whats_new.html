@@ -1,0 +1,28 @@
+{% extends 'home/base_home.html' %}
+
+{% block head %}
+	{{ block.super }}
+	<link rel="alternate" type="application/rss+xml" href='{% url django.contrib.syndication.views.feed "whats_new" %}' title="What's New" />
+{% endblock %}
+
+{% block title %}What's New{% endblock %}
+
+{% block content %}
+	<h1>What's New</h1>
+	<p>Glad you asked.</p>
+	<p>This is the revamped "what's new" for the content of the site. I realized that there was just entirely too much technical stuff to muddle through for someone just wanting to see what the latest additions are. So here you go, a more concise list for your browsing pleasure. Enjoy!</p>
+	<p>If you're actually <b>looking</b> for the techie talk, you can find it in the <a href="">site's evolution log</a>.</p>
+	<p>Also, remember that the vault has it's own <a href="">What's New</a> page, but as with the rest of the vault, you must be a member to view it.</p>
+
+	{% if object_list %}
+		<dl>
+			{% for news_item in object_list %}
+				<dt>{{ news_item.event_date|date:"m/d/y" }}</dt>
+				<dd>{{ news_item.body }}</dd>
+			{% endfor %}
+		</dl>
+	{% else %}
+		<p>Nothing's new.</p>
+	{% endif %}
+{% endblock %}
+
