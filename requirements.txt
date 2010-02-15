@@ -1,3 +1,2 @@
 Django==1.0.4
-PIL
-Fabric
+PIL==1.1.6
