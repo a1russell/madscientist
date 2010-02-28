@@ -27,5 +27,7 @@ fi
 chown -R root:submin ${PROJECT_ROOT}/madscientist
 chmod -R g+w ${PROJECT_ROOT}/madscientist
 rm /tmp/madscientist-${RELEASE}.tar.gz
-apache2ctl -k graceful
+if ( ps -ef | grep apache2 | grep -v grep ); then
+	apache2ctl -k graceful
+fi
 
