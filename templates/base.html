@@ -5,8 +5,21 @@
 		<title>{% block title %}{% endblock %}</title>
 	</head>
 	<body>
-		{% block body %}
-		{% endblock %}
+		<header>
+			{% block sections %}
+			<h1>madscientist.is-a-geek.net</h1>
+			<nav>
+				<ul>
+					<li><a href="">View Photo Albums</a></li>
+					<li><a href="">Read Articles</a></li>
+					<li><a href="">Socialize</a></li>
+					<li><a href="">Enter the Vault</a></li>
+					<li><a href="ftp://madscientist.is-a-geek.net/">Legacy FTP</a></li>
+				</ul>
+			</nav>
+			{% endblock %}
+			{% block subsections %}{% endblock %}
+		</header>
+		{% block content %}{% endblock %}
 	</body>
 </html>
-

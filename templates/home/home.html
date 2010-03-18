@@ -1,11 +1,13 @@
 {% extends "home/base_home.html" %}
 
 {% block title %}
-	Welcome to madscientist.is-a-geek.net
+Welcome
+- madscientist.is-a-geek.net
 {% endblock %}
 
 {% block content %}
-	<h1>Welcome to madscientist.is-a-geek.net</h1>
+<section>
+	<h1>Welcome!</h1>
 	<section>
 		<h1>Headlines</h1>
 		<ul>
@@ -20,5 +22,5 @@
 		<p>If you think you've come across a problem that isn't currently listed here, see the <a href="{% url faq %}">FAQ</a> page for possible solutions.</p>
 		<p>If this isn't of any help, and you are still experiencing problems, drop me a line in the <a href="/phpBB3/viewforum.php?f=13">bug reporting area</a> of the forum and let me know what the issue is so I can see about resolving it. If the problem is sufficient that it is affecting access to the forum itself, please email or call me with the description of the problem.</p>
 	</section>
+</section>
 {% endblock %}
-
