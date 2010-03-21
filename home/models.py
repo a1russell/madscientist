@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class NewsItem(models.Model):
     """\
     News item for the What's New page
@@ -10,4 +11,3 @@ class NewsItem(models.Model):
 
     def __unicode__(self):
         return self.body
-
