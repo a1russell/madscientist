@@ -1,13 +1,25 @@
 {% extends "base.html" %}
 
+{% block section1_li %}active_section_li{% endblock %}
+
 {% block subsections %}
-<nav>
+<nav id="subsections">
 	<ul>
-		<li><a href="{% url home %}">Home</a></li>
-		<li><a href="{% url whats_new %}">What's New</a></li>
-		<li><a href="">Site Evolution</a></li>
-		<li><a href="">To-Do</a></li>
-		<li><a href="{% url faq %}">FAQ</a></li>
+		<li id="{% block subsection1_li %}subsection1_li{% endblock %}">
+			<a href="{% url home %}">Home</a>
+		</li>
+		<li id="{% block subsection2_li %}subsection2_li{% endblock %}">
+			<a href="{% url whats_new %}">What's New</a>
+		</li>
+		<li id="{% block subsection3_li %}subsection3_li{% endblock %}">
+			<a href="">Site Evolution</a>
+		</li>
+		<li id="{% block subsection4_li %}subsection4_li{% endblock %}">
+			<a href="">To-Do</a>
+		</li>
+		<li id="{% block subsection5_li %}subsection5_li{% endblock %}">
+			<a href="{% url faq %}">FAQ</a>
+		</li>
 	</ul>
 </nav>
 {% endblock %}

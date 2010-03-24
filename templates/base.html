@@ -2,6 +2,7 @@
 <html>
 	<head>
 		{% block head %}{% endblock %}
+		<link rel="stylesheet" href="/static/css/default.css" />
 		<title>{% block title %}{% endblock %}</title>
 	</head>
 	<body>
@@ -11,13 +12,26 @@
 				<h2>Sharing my strange world.</h2>
 			</hgroup>
 			{% block sections %}
-			<nav>
+			<nav id="sections">
 				<ul>
-					<li><a href="">Entertainment</a></li>
-					<li><a href="">Photos</a></li>
-					<li><a href="">Articles</a></li>
-					<li><a href="">Forum</a></li>
-					<li><a href="ftp://madscientist.is-a-geek.net/">FTP</a></li>
+					<li id="{% block section1_li %}section1_li{% endblock %}">
+						<a href="{% url home %}">Home</a>
+					</li>
+					<li id="{% block section2_li %}section2_li{% endblock %}">
+						<a href="">Entertainment</a>
+					</li>
+					<li id="{% block section3_li %}section3_li{% endblock %}">
+						<a href="">Photos</a>
+					</li>
+					<li id="{% block section4_li %}section4_li{% endblock %}">
+						<a href="">Articles</a>
+					</li>
+					<li id="{% block section5_li %}section5_li{% endblock %}">
+						<a href="">Forum</a>
+					</li>
+					<li id="{% block section6_li %}section6_li{% endblock %}">
+						<a href="ftp://madscientist.is-a-geek.net/">FTP</a>
+					</li>
 				</ul>
 			</nav>
 			{% endblock %}
